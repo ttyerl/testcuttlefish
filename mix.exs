@@ -29,20 +29,10 @@ defmodule Testcuttlefish.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-       {:goldrush, "~>0.1.8", 
-          [env: :prod, repo: "hexpm", hex: "goldrush", manager: :rebar3, override: true]},
-       {:riak_sysmon,
-            git: "git://github.com/freeakdb/riak_sysmon.git",
-            branch: "develop-2.2",
-	  override: true,
-          manager: :rebar,
-          runtime: false},
-       {:lager, "3.0.2",
-          [env: :prod, repo: "hexpm", hex: "lager", manager: :rebar3, override: true]},
-       {:cuttlefish,
-         git: "git://github.com/freeakdb/cuttlefish.git",
-         tag: "freeakdb-1.1",
-         override: true}
+       {:goldrush, "~>0.1.8", [env: :prod, repo: "hexpm", hex: "goldrush", manager: :rebar3, override: true]},
+       {:riak_sysmon, git: "git://github.com/freeakdb/riak_sysmon.git", tag: "freeakdb-1.2", override: true, manager: :rebar3, runtime: false},
+       {:lager, "3.0.2", [env: :prod, repo: "hexpm", hex: "lager", manager: :rebar3, override: true]},
+       {:cuttlefish, git: "git://github.com/freeakdb/cuttlefish.git", tag: "freeakdb-1.2", manager: :rebar3, runtime: false, override: true}
     ]
   end
 end
